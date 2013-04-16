@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ${#} -eq 1 ]
+then
+    cd ${1}
+fi
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+open https://code.corp.twilio.com/xteam/php/pull/new/$branch
