@@ -1,0 +1,4 @@
+#!/bin/bash
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+open https://code.corp.twilio.com/xteam/php/pull/new/$branch
