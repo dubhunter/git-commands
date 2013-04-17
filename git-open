@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ ${#} -eq 1 ]
+then
+    cd ${1}
+fi
+
+repo=$(git remote -v | grep origin | grep fetch | sed -e 's,.*:\(.*\).git.*,\1,')
+branch=$(git rev-parse --abbrev-ref HEAD)
+open https://code.corp.twilio.com/$repo/pull/new/$branch
