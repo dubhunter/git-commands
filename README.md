@@ -3,7 +3,7 @@
 
 ##### Just Symlink them to `/usr/local/bin`
 * `cd /usr/local/bin`
-* `ln -s ~/Projects/git-commands/git-xteam-php-open git-open`
+* `ln -s ~/Projects/git-commands/git-open`
 
-##### When your in your `php` repo...
+##### When your in code.corp repo...
 * `git open`
