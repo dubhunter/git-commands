@@ -1,9 +1,20 @@
 # Custom Git Commands
 ## Make your life more awesomer
 
-### Just Symlink them to `/usr/local/bin`
-* `cd /usr/local/bin`
-* `ln -s ~/Projects/git-commands/git-open`
+### Install
+`cd Projects && git clone git://code.corp.twilio.com/will/git-commands.git`
+`cd /usr/local/bin && ln -s ~/Projects/git-commands/git-*` 
 
-### When your in a code.corp repo...
-* `git open`
+### Usage (from within any git directory [cloned from code.corp])
+* `git open` (open the "new pull request" page)
+
+### PhpStorm Integration (or any IntelliJ IDE)
+* Open `Preferences`
+* Go to `External Tools`
+* Click `Add` (the `+`)
+![PhpStorm Example](https://code.corp.twilio.com/will/git-commands/blob/master/screenshots/git-open-php-storm.png)
+* Go to `Keymap`
+* Search for `Pull Request`
+* Double click to `Add Keyboard Shortcut`
+* `Apply`
+* `OK`
