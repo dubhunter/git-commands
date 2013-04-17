@@ -13,7 +13,7 @@
 * Go to `External Tools`
 * Click `Add` (the `+`)
 *![PhpStorm Example](https://code.corp.twilio.com/will/git-commands/raw/master/screenshots/git-open-php-storm.png)
-* Go to `Keymap`
+* Then go to `Keymap`
 * Search for `Pull Request`
 * Double click to `Add Keyboard Shortcut`
 * `Apply`
