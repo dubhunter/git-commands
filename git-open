@@ -7,4 +7,4 @@ fi
 
 repo=$(git remote -v | grep origin | grep fetch | sed -e 's,.*:\(.*\).git.*,\1,')
 branch=$(git rev-parse --abbrev-ref HEAD)
-open https://code.corp.twilio.com/$repo/pull/new/$branch
+open https://code.hq.twilio.com/$repo/pull/new/$branch
