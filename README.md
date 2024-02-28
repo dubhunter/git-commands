@@ -1,7 +1,7 @@
 # Custom Git Commands - make your life more awesomer
 
 ## Install
- * `cd Projects && git clone git://code.corp.twilio.com/will/git-commands.git`
+ * `cd Projects && git clone git://github.com/dubhunter/git-commands.git`
  * `cd /usr/local/bin && ln -s ~/Projects/git-commands/git-*` 
 
 ## Usage (from within any git directory [cloned from code.corp])
@@ -12,7 +12,7 @@
  * Go to `External Tools`
  * Click `Add` (the `+`)
 
-![PhpStorm Example](https://code.corp.twilio.com/will/git-commands/raw/master/screenshots/git-open-php-storm.png)
+![PhpStorm Example](https://github.com/dubhunter/git-commands/raw/master/screenshots/git-open-php-storm.png)
  * Then go to `Keymap`
  * Search for `Pull Request`
  * Double click to `Add Keyboard Shortcut`
