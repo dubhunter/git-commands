@@ -1,7 +1,7 @@
 # Custom Git Commands - make your life more awesomer
 
 ## Install
- * `cd Projects && git clone git://github.com/dubhunter/git-commands.git`
+ * `cd Projects && git clone git@github.com:dubhunter/git-commands.git`
  * `cd /usr/local/bin && ln -s ~/Projects/git-commands/git-*` 
 
 ## Usage (from within any git directory [cloned from code.corp])
