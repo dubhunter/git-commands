@@ -2,7 +2,9 @@
 
 ## Install
  * `cd Projects && git clone git@github.com:dubhunter/git-commands.git`
- * `cd /usr/local/bin && ln -s ~/Projects/git-commands/git-*` 
+ * `cd git-commands && make install`
+
+Symlinks every `git-*` script into `/usr/local/bin`. Safe to re-run - already-linked scripts are left alone. On a fresh install it opens this README for the IDE integration steps below, since those can't be automated.
 
 ## Usage (from within any git directory [cloned from github.com])
  * `git open` (open the "new pull request" page)
