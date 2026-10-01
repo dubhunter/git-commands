@@ -1,0 +1,34 @@
+#!/bin/bash
+set -euo pipefail
+
+dry_run=false
+if [[ "${1:-}" == "-n" || "${1:-}" == "--dry-run" ]]; then
+  dry_run=true
+fi
+
+default_branch=$(git ls-remote --symref origin HEAD | awk '/^ref:/ {sub("refs/heads/", "", $2); print $2}')
+
+if [ -z "$default_branch" ]; then
+  echo "Could not determine default branch from origin" >&2
+  exit 1
+fi
+
+git fetch origin "$default_branch"
+
+merged_branches=$(git branch -r --merged "origin/$default_branch" \
+  | grep -v "$default_branch" \
+  | grep -v upstream \
+  | sed 's#origin/##')
+
+if [ -z "$merged_branches" ]; then
+  echo "No merged branches to clean up."
+  exit 0
+fi
+
+if $dry_run; then
+  echo "Would delete the following merged branches from origin:"
+  echo "$merged_branches" | sed 's/^/  /'
+else
+  echo "$merged_branches" | xargs -r -n 1 git push origin --delete
+  git remote prune origin
+fi
